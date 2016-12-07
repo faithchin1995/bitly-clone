@@ -1,2 +1,44 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<body>
+
+<div class="background-image">
+<h1>Bitly Clone</h1>	
+
+<form action="/urls" method="post" id="url-form">
+	<input type="text" name="long_url" id='form-input' placeholder="Enter URL here">
+	<input type="submit" value="Submit" id='form-submit' >
+</form>
+
+<p class = "info"></p>
+
+<table align="center">
+  <tr>
+ 		<!--th>id</th>-->
+ 		<th>long_url</th>
+ 		<th>short_url</th>
+ 		<th>counter</th>
+ 		<!--th>created_at</th>-->
+ 		<!--th>updated_at</th>-->
+ 	</tr>
+
+ 
+ 		<% @urls.each do |url| %>
+ 		 <tr>
+ 	   	<!--td><%= url.id %></td>-->
+ 		  <td> 
+ 		  <a href="<%= url.long_url %>" target="_blank">
+ 		  <%= url.long_url %></a>
+ 		  </td>
+ 		  <td>
+ 		  <a href="<%= url.short_url %>" target="_blank">
+ 		  <%= url.short_url %></a>
+ 		  </td>
+ 		  <td><%= url.click_count %></td>
+ 		  <!--td><%= url.created_at %></td>-->
+ 		  <!--td><%= url.updated_at %></td>-->
+ 		 </tr>
+ 		<% end %>
+
+</table>
+</div>
+</body>
+

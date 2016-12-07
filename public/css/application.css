@@ -1,0 +1,65 @@
+html, body{
+	height: 100%;
+	margin: 0;
+
+}
+
+.background-image {
+ 	background:url(http://wallpaperscraft.com/image/laptop_room_on_the_desk_keyboard_mouse_apple_window_interior_73963_1920x1080.jpgg);
+ 	background-size: cover;
+ 	height: 100%;
+
+
+}
+
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 85px;
+	font-family: "Cinzel", serif;
+	color: white;
+	line-height: 54px;
+	font-weight: 700;
+	padding: 50px;
+	padding-left: 50px;
+	margin-bottom: 0px;
+}
+
+#url-form {
+	text-align: center;
+	color: red;
+	font-size: 50px;
+}
+
+#form-input {
+	margin-left: 100px;
+	width: 30%;
+	height: 54px;
+}
+
+::-webkit-input-placeholder {
+	font-size: 25px;
+	padding-left: 15px;
+	font-family: 'Arapey', serif;
+	color: black;
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+
+#form-submit {
+	height: 54px;
+	width: 10%;
+	font-size: 16px;
+}
+
+table, th, td {
+	margin-top: 100px;
+	width: 50%;
+	padding:15px;
+	font-size: 20px;
+	text-align: left; 
+	border-collapse: collapse;
+
