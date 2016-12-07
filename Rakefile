@@ -203,3 +203,13 @@ Database
 	$ rake db:version
 "
 end
+
+task import_products4: :environment do
+  require 'csv'
+
+  Url.transaction do
+    urls = CSV.read("}/db/urls")
+    columns = [:long_url, :short_url, :click_count]
+    Product.import columns, products, validate: false
+  end
+end
