@@ -3,7 +3,7 @@ get '/' do
   # puts "[LOG] Params: #{params.inspect}"
   # erb: index
   @urls = Url.last(5)
-  # @urls.reverse!
+ 	@urls.reverse!
   erb :"static/index"
 end
 

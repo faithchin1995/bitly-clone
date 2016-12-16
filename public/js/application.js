@@ -14,9 +14,6 @@
 // })
 
 
-
-
-
 $(document).ready(function(){
     
     $('#url-form').submit(function(e){ //e is for event
@@ -36,7 +33,7 @@ $(document).ready(function(){
                 $('.info').append('<p>Your short url is: ' + '<a href="' + data.short_url + '">' + data.short_url + '</a></p>');
 
                 $('table').append('<tr><td>' + '<a href="' + data.long_url + '">' + data.long_url + '</a>' + '</td>' + 
-                	'<td>' +data.short_url +'</td>' +
+                	'<td>' + '<a href="' + data.short_url + '">' + data.short_url + '</a>' + '</td>' +
                 	'<td>' +  data.click_count + '</td>' + 
                    '</tr>')
           
@@ -44,9 +41,11 @@ $(document).ready(function(){
             }, 
             error: function(data){
             	alert('fail')
-                // $('.info').append('<p>Oops! Please check your url - it should start with http:// or http://s.</p>');
-                // $('#button').val('Submit');
+                $('.info').append('<p>Oops! Please check your url - it should start with http:// or http://s.</p>');
+                $('#button').val('Submit');
             } 
         });        
     });
 });
+
+'<tr><td>' + '<a href="' + data.long_url + '">' + data.long_url + '</a>' + '</td>'
